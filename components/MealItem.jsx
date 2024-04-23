@@ -11,7 +11,6 @@ const MealItem = ({ title, imageUrl, duration, complexity, affordability }) => {
   return (
     <View style={styles.mealItemContainer}>
       <Pressable
-        android_ripple={{ color: "#ccc" }}
         style={({ pressed }) => (pressed ? styles.buttonPressed : null)}
       >
         <View style={styles.innerContainer}>
@@ -35,7 +34,7 @@ export default MealItem;
 const styles = StyleSheet.create({
   mealItemContainer: {
     margin: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffff",
     elevation: 4,
     borderRadius: 8,
     shadowColor: "#000",

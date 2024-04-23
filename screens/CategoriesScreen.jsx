@@ -16,7 +16,6 @@ const CategoriesScreen = ({ navigation }) => {
       renderItem={({ item }) => (
         <CategoryTile
           title={item?.title}
-          color={item?.color}
           onPress={_handlePress.bind(this, item?.id)}
         />
       )}
