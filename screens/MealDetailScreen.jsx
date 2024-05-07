@@ -1,10 +1,10 @@
 import { useLayoutEffect } from "react";
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text } from "react-native";
 import { MEALS } from "../data/dummy-data";
-import MealDetails from "../components/MealDetails";
 import { Colors } from "../constants/colors";
-import Subtitle from "../components/meal-details/Subtitle";
-import List from "../components/meal-details/List";
+import { IconButton } from "../components/common";
+import { List, Subtitle } from "../components/meal-details";
+import { MealDetails } from "../components";
 
 const MealDetailScreen = ({ route, navigation }) => {
   const { mealId, title } = route.params;
@@ -13,6 +13,9 @@ const MealDetailScreen = ({ route, navigation }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle: title,
+      headerRight: () => {
+        return <IconButton name="star" size={24} color="#fff" />;
+      },
     });
   }, []);
 

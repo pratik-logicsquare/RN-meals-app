@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet } from "react-native";
 import { CATEGORIES } from "../data/dummy-data";
-import CategoryTile from "../components/CategoryTile";
+import { CategoryTile } from "../components";
 
 const CategoriesScreen = ({ navigation }) => {
   const _handlePress = (id) => {
