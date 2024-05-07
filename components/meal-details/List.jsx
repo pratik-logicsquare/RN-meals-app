@@ -3,10 +3,8 @@ import { Colors } from "../../constants/colors";
 
 const List = ({ data }) => {
   return data.map((item) => (
-    <View style={styles.listItemContainer}>
-      <Text key={item} style={styles.listItem}>
-        {item}
-      </Text>
+    <View key={item} style={styles.listItemContainer}>
+      <Text style={styles.listItem}>{item}</Text>
     </View>
   ));
 };
