@@ -25,6 +25,7 @@ export default function App() {
               backgroundColor: Colors.primary700,
             },
             headerTintColor: "#fff",
+            headerBackTitleVisible: false,
           }}
         >
           <Stack.Screen name="MealsCategories" component={CategoriesScreen} />
